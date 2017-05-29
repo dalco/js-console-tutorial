@@ -23,3 +23,26 @@ for (var i = 0; i < 100; i++) {
         console.count("less than 50");
     }
 }
+
+console.time("createObjects");
+
+var array = [];
+for (var i = 0; i < 10000000; i++) {
+    array.push({index: i});
+}
+
+console.timeEnd("createObjects");
+
+function Movie(name, year) {
+    this.name = name;
+    this.year = year;
+}
+
+var amarcord = new Movie("Amarcord", 1973);
+var trainspotting = new Movie("Trainspotting", 1996);
+var leon = new Movie("Leon", 1994);
+
+var movies = [amarcord, trainspotting, leon];
+
+console.table(movies);
+

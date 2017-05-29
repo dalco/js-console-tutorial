@@ -1,37 +1,41 @@
 <html>
-    <head>
-        <title>Advanced Logging with the JavaScript Console</title>
-    </head>
-    <body>
-        <h1>Advanced Logging with the JavaScript Console - egghead.io tutorial</h1>
-        <p>console.log("log");</p>
-        <p>console.warn("warning");</p>
-        <p>console.error("error");</p>
-        <p>console.info("info");</p>
-        <p>console.debug("debug");</p>
-        <p>console.log("Hello world my name is %s and I am %d years old and here is an object: %o", "Federico", 30, {foo: "bar"});</p>
-        <p>console.log("this is my %coutput!", "color: blue; font-size: 33px");</p>
-        <p>%s = string, %d = digit, %o = object, %c = css</p>
-        <h2>console.groupCollapsed: </h2>
-        <p>for (var i = 0; i < 100; i++) {
-    var num = Math.random() * 100;
-    console.group("Picking a random number..."); ||  console.groupCollapsed("Picking a random number...");
-    console.log("Number greater then 10?", num > 10);
-    console.log("Number greater then 50?", num > 50);
-    console.groupEnd();
-}</p>
-<h2>console.count: </h2>
-<p>
-    for (var i = 0; i < 100; i++) {
-    var num = Math.random() * 100;
-    
-    if(num > 50){
-        console.count("greater than 50");
-    }else{
-        console.count("less than 50");
-    }
-}
-</p>
-        <script src="index.js"></script>
-    </body>
+
+<head>
+    <title>Advanced Logging with the JavaScript Console</title>
+</head>
+
+<body>
+    <h1>Advanced Logging with the JavaScript Console - egghead.io tutorial</h1>
+    <p>console.log("log");</p>
+    <p>console.warn("warning");</p>
+    <p>console.error("error");</p>
+    <p>console.info("info");</p>
+    <p>console.debug("debug");</p>
+    <p>console.log("Hello world my name is %s and I am %d years old and here is an object: %o", "Federico", 30, {foo: "bar"});</p>
+    <p>console.log("this is my %coutput!", "color: blue; font-size: 33px");</p>
+    <p>%s = string, %d = digit, %o = object, %c = css</p>
+    <h2>console.groupCollapsed: </h2>
+    <p>for (var i = 0; i
+        < 100; i++) { var num=M ath.random() * 100; console.group( "Picking a random number..."); || console.groupCollapsed(
+            "Picking a random number..."); console.log( "Number greater then 10?", num> 10); console.log("Number greater then 50?", num > 50); console.groupEnd(); }
+    </p>
+    <h2>console.count: </h2>
+    <p>
+        for (var i = 0; i
+        < 100; i++) { var num=M ath.random() * 100; if(num> 50){ console.count("greater than 50"); }else{ console.count("less than 50"); } }
+    </p>
+    <h2>console.time/console.timeEnd:</h2>
+    <p>
+        console.time("createObjects"); var array = []; for (var i = 0; i
+        < 10000000; i++) { array.push({index: i}); } console.timeEnd( "createObjects"); </p>
+            <h2>console.table:</h2>
+            <p>
+                function Movie(name, year) { this.name = name; this.year = year; } var amarcord = new Movie("Amarcord", 1973); var trainspotting
+                = new Movie("Trainspotting", 1996); var leon = new Movie("Leon", 1994); var movies = [amarcord, trainspotting,
+                leon]; console.table(movies);
+            </p>
+
+            <script src="./index.js"></script>
+</body>
+
 </html>
